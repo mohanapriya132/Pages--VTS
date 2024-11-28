@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.jpg" alt="logo" class="w-50 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 items-center text-center  text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>VTS PROCESS</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+                  <div class="relative">
+                    <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+                      <i class="fa-solid fa-list-check"></i> OUR TRAININGS
+                    </a>
+                    
+                    <!-- First Level Dropdown for "OUR PROJECTS" -->
+                    <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-[20rem]">
+                      <a href="frontendfront.html" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Frontend Developer</a>
+                      <a href="Backendpython.html" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(python)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Node.js)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">Backend Developer(Java)</a>
+                      <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100">MERN Stack Developer</a>
+                    </div>
+                  </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>CAREERS</a>
+           
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+
+       <div class="relative">
+        <img src="images/front-end.jpg" alt="banner" class="w-full" style="height: 26rem;">
+        </div>
+        <nav class="bg-white border-b border-gray-200 shadow-md sticky top-20 z-20">
+            <div class="container mx-auto px-6 py-3 flex justify-center mt-3 items-center ">
+              <!-- Navbar Links -->
+              <div class="flex space-x-8">
+                <a href="#about" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  About
+                </a>
+                <a href="#skills" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Skill You Learn
+                </a>
+                <a href="#modules" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Technical Modules
+                </a>
+                <a href="#features" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Key Features
+                </a>
+                <a href="#certification" class="text-gray-700 font-semibold hover:text-blue-600 transition duration-300 hover:scale-105">
+                  Certification
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <div id="about" class="bg-gradient-to-r from-green-600 via-teal-500 to-blue-400 py-12" id="about">
+            <div class="max-w-6xl mx-auto px-6">
+              <!-- Main Container -->
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Content Section -->
+                <div class="space-y-6">
+                  <h1 class="text-4xl font-extrabold text-white mb-4 animate__animated animate__fadeInDown">
+                    MERN Stack Development
+                  </h1>
+                  <h2 class="text-2xl font-semibold text-green-200 mb-6 animate__animated animate__fadeInLeft">
+                    Course Overview
+                  </h2>
+                  <p class="text-white leading-relaxed mb-4 animate__animated animate__fadeIn">
+                    The MERN stack is a powerful combination of technologies that empowers developers to build modern, full-stack web applications. 
+                    This course covers everything you need to know to become proficient in **MongoDB**, **Express.js**, **React.js**, and **Node.js**.
+                  </p>
+                  <p class="text-white leading-relaxed mb-4 animate__animated animate__fadeIn">
+                    Through hands-on projects and real-world scenarios, you'll master front-end and back-end development, database integration, API 
+                    creation, authentication, and deployment strategies. Whether you're building e-commerce platforms or real-time chat 
+                    applications, this course has you covered.
+                  </p>
+                  <p class="text-white leading-relaxed animate__animated animate__fadeIn">
+                    By the end of the course, you'll have built multiple projects, including a fully functional web app, and gained the confidence 
+                    to create scalable, responsive, and secure applications.
+                  </p>
+                </div>
+                
+                <!-- Skills Section -->
+                <div class="bg-white shadow-lg rounded-lg p-6 space-y-6 transform hover:scale-105 hover:shadow-2xl transition-all duration-300">
+                  <h2 class="text-2xl font-semibold text-gray-800 animate__animated animate__zoomIn">Skills You Will Learn</h2>
+                  <ul class="space-y-4">
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> React.js (Functional Components, Hooks, Context API)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> Node.js (Server-side development)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> Express.js (Building RESTful APIs)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> MongoDB (Data modeling, CRUD operations)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> JWT Authentication & Authorization
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> State Management (Redux Toolkit, Context API)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> Deployment (Vercel, Netlify, Heroku)
+                    </li>
+                    <li class="flex items-center text-gray-800">
+                      <span class="w-3 h-3 bg-teal-500 rounded-full mr-3"></span> Real-time Applications (Socket.IO)
+                    </li>
+                  </ul>
+                  
+                  <button
+                    class="mt-6 w-full bg-green-600 text-white text-center py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 animate__animated animate__pulse">
+                    Enquire Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="skills" class="bg-gradient-to-r from-gray-50 to-gray-100 py-12" id="skills">
+            <div class="max-w-7xl mx-auto px-6">
+              <!-- Header Section -->
+              <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-800 animate__animated animate__fadeInDown">
+                  Skills You Will Master
+                </h1>
+                <p class="text-gray-600 mt-4 animate__animated animate__fadeInUp">
+                  Unlock the full potential of modern web development by mastering essential MERN Stack technologies.
+                </p>
+              </header>
+          
+              <!-- Skills Grid Section -->
+              <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fab fa-react text-5xl text-green-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">React.js</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Build interactive UIs with React’s component-based architecture, hooks, and Context API.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fas fa-server text-5xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Node.js</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Develop scalable backend systems using JavaScript and asynchronous programming.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fas fa-link text-5xl text-green-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Express.js</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Build fast and efficient server-side applications with Express, a minimalist framework.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 4 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fas fa-database text-5xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">MongoDB</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Master NoSQL databases for flexible, scalable, and high-performance data storage.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 5 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fas fa-shield-alt text-5xl text-green-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Authentication</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Implement secure authentication systems using JWT and OAuth for your applications.
+                  </p>
+                </div>
+          
+                <!-- Skill Card 6 -->
+                <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center gap-4 hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 animate__animated animate__zoomIn">
+                  <i class="fas fa-cloud text-5xl text-blue-500"></i>
+                  <h3 class="text-xl font-semibold text-gray-800">Deployment</h3>
+                  <p class="text-gray-600 text-sm text-center">
+                    Learn to deploy MERN stack applications to platforms like Heroku, AWS, and Vercel.
+                  </p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+ <div id="modules" >     <!-- Header Section -->
+<header class="text-center mb-8" id="mern-syllabus">
+  <h1 class="text-2xl font-bold text-gray-800">MERN Stack Syllabus</h1>
+  <p class="text-gray-600 mt-2 text-sm">
+    Master Full-Stack Development with this comprehensive MERN Stack syllabus.
+  </p>
+</header>
+</div> 
+<!-- Syllabus Section -->
+<div class="bg-gradient-to-b from-gray-50 via-white to-gray-100 py-10">
+  <div class="max-w-3xl mx-auto space-y-6">
+    <!-- Module 1: MongoDB -->
+    <div
+      class="group relative border-2 border-transparent rounded-lg bg-white p-6 shadow-md hover:shadow-lg hover:border-blue-400 transition duration-300"
+    >
+      <h3
+        class="text-lg font-semibold text-blue-600 cursor-pointer flex items-center justify-between"
+        onclick="toggleDropdown('mern-module1')"
+      >
+        <span>Module 1: MongoDB - Database Management</span>
+        <i class="fas fa-chevron-down text-gray-600 group-hover:text-blue-600"></i>
+      </h3>
+      <ul
+        id="mern-module1"
+        class="mt-3 text-sm text-gray-700 hidden pl-4 border-l-2 border-blue-300"
+      >
+        <li>Introduction to NoSQL Databases</li>
+        <li>Installing and Configuring MongoDB</li>
+        <li>CRUD Operations with MongoDB</li>
+        <li>Aggregation Framework and Indexing</li>
+      </ul>
+    </div>
+
+    <!-- Module 2: Express.js -->
+    <div
+      class="group relative border-2 border-transparent rounded-lg bg-white p-6 shadow-md hover:shadow-lg hover:border-green-400 transition duration-300"
+    >
+      <h3
+        class="text-lg font-semibold text-green-600 cursor-pointer flex items-center justify-between"
+        onclick="toggleDropdown('mern-module2')"
+      >
+        <span>Module 2: Express.js - Backend Framework</span>
+        <i class="fas fa-chevron-down text-gray-600 group-hover:text-green-600"></i>
+      </h3>
+      <ul
+        id="mern-module2"
+        class="mt-3 text-sm text-gray-700 hidden pl-4 border-l-2 border-green-300"
+      >
+        <li>Introduction to Express.js</li>
+        <li>Building RESTful APIs</li>
+        <li>Middleware and Routing</li>
+        <li>Integration with MongoDB</li>
+      </ul>
+    </div>
+
+    <!-- Module 3: React.js -->
+    <div
+      class="group relative border-2 border-transparent rounded-lg bg-white p-6 shadow-md hover:shadow-lg hover:border-indigo-400 transition duration-300"
+    >
+      <h3
+        class="text-lg font-semibold text-indigo-600 cursor-pointer flex items-center justify-between"
+        onclick="toggleDropdown('mern-module3')"
+      >
+        <span>Module 3: React.js - Frontend Framework</span>
+        <i class="fas fa-chevron-down text-gray-600 group-hover:text-indigo-600"></i>
+      </h3>
+      <ul
+        id="mern-module3"
+        class="mt-3 text-sm text-gray-700 hidden pl-4 border-l-2 border-indigo-300"
+      >
+        <li>Component-Based Architecture</li>
+        <li>React Hooks (useState, useEffect, etc.)</li>
+        <li>State Management and Context API</li>
+        <li>Routing with React Router</li>
+      </ul>
+    </div>
+
+    <!-- Module 4: Node.js -->
+    <div
+      class="group relative border-2 border-transparent rounded-lg bg-white p-6 shadow-md hover:shadow-lg hover:border-yellow-400 transition duration-300"
+    >
+      <h3
+        class="text-lg font-semibold text-yellow-600 cursor-pointer flex items-center justify-between"
+        onclick="toggleDropdown('mern-module4')"
+      >
+        <span>Module 4: Node.js - Server-Side JavaScript</span>
+        <i class="fas fa-chevron-down text-gray-600 group-hover:text-yellow-600"></i>
+      </h3>
+      <ul
+        id="mern-module4"
+        class="mt-3 text-sm text-gray-700 hidden pl-4 border-l-2 border-yellow-300"
+      >
+        <li>Introduction to Node.js</li>
+        <li>File System and Streams</li>
+        <li>Asynchronous Programming</li>
+        <li>Integrating Node.js with Express</li>
+      </ul>
+    </div>
+
+    <!-- Module 5: Deployment -->
+    <div
+      class="group relative border-2 border-transparent rounded-lg bg-white p-6 shadow-md hover:shadow-lg hover:border-purple-400 transition duration-300"
+    >
+      <h3
+        class="text-lg font-semibold text-purple-600 cursor-pointer flex items-center justify-between"
+        onclick="toggleDropdown('mern-module5')"
+      >
+        <span>Module 5: Deployment and Maintenance</span>
+        <i class="fas fa-chevron-down text-gray-600 group-hover:text-purple-600"></i>
+      </h3>
+      <ul
+        id="mern-module5"
+        class="mt-3 text-sm text-gray-700 hidden pl-4 border-l-2 border-purple-300"
+      >
+        <li>Deploying Applications to Heroku and AWS</li>
+        <li>CI/CD Pipelines with GitHub Actions</li>
+        <li>Monitoring and Debugging</li>
+        <li>Version Control with Git</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Download Syllabus Button -->
+  <div class="text-center mt-8">
+    <button
+      class="px-6 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+      onclick="downloadSyllabus()"
+    >
+      Download Full Syllabus
+    </button>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  // Toggle dropdown visibility
+  function toggleDropdown(moduleId) {
+    const element = document.getElementById(moduleId);
+    element.classList.toggle("hidden");
+  }
+
+  // Download syllabus as a text file
+  function downloadSyllabus() {
+    const content = `
+      MERN Stack Syllabus:
+
+      Module 1: MongoDB - Database Management
+      - Introduction to NoSQL Databases
+      - Installing and Configuring MongoDB
+      - CRUD Operations with MongoDB
+      - Aggregation Framework and Indexing
+
+      Module 2: Express.js - Backend Framework
+      - Introduction to Express.js
+      - Building RESTful APIs
+      - Middleware and Routing
+      - Integration with MongoDB
+
+      Module 3: React.js - Frontend Framework
+      - Component-Based Architecture
+      - React Hooks (useState, useEffect, etc.)
+      - State Management and Context API
+      - Routing with React Router
+
+      Module 4: Node.js - Server-Side JavaScript
+      - Introduction to Node.js
+      - File System and Streams
+      - Asynchronous Programming
+      - Integrating Node.js with Express
+
+      Module 5: Deployment and Maintenance
+      - Deploying Applications to Heroku and AWS
+      - CI/CD Pipelines with GitHub Actions
+      - Monitoring and Debugging
+      - Version Control with Git
+    `;
+    const blob = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "MERN_Stack_Syllabus.txt";
+    link.click();
+  }
+</script>
+
+
+
+
+<section class="py-10 bg-gradient-to-b from-gray-100 to-white" id="features">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-gray-800 uppercase text-center mb-8">Key Features</h1>
+
+    <!-- Timeline Container -->
+    <div class="relative flex flex-col items-center">
+      <!-- Timeline Line -->
+      <div class="absolute w-1 bg-blue-300 top-0 bottom-0"></div>
+
+      <!-- Feature 1 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 mb-6 hover:scale-105 transition-transform">
+        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-shield-alt text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-blue-700">Enhanced Security</h3>
+          <p class="text-sm text-gray-600">We prioritize data protection to ensure your safety.</p>
+        </div>
+        <div class="absolute left-0 transform -translate-x-1/2 w-3 h-3 bg-blue-500 rounded-full"></div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 mb-6 hover:scale-105 transition-transform lg:self-end">
+        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-tachometer-alt text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-green-700">High Performance</h3>
+          <p class="text-sm text-gray-600">Experience speed and reliability across all platforms.</p>
+        </div>
+        <div class="absolute right-0 transform translate-x-1/2 w-3 h-3 bg-green-500 rounded-full"></div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 mb-6 hover:scale-105 transition-transform">
+        <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-sync-alt text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-700">Seamless Integration</h3>
+          <p class="text-sm text-gray-600">Integrate effortlessly with your existing tools.</p>
+        </div>
+        <div class="absolute left-0 transform -translate-x-1/2 w-3 h-3 bg-yellow-500 rounded-full"></div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 mb-6 hover:scale-105 transition-transform lg:self-end">
+        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-cogs text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-purple-700">Customizable Settings</h3>
+          <p class="text-sm text-gray-600">Adapt features to meet your specific requirements.</p>
+        </div>
+        <div class="absolute right-0 transform translate-x-1/2 w-3 h-3 bg-purple-500 rounded-full"></div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 mb-6 hover:scale-105 transition-transform">
+        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-users text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-red-700">User-Friendly Design</h3>
+          <p class="text-sm text-gray-600">Navigate with ease using our intuitive interface.</p>
+        </div>
+        <div class="absolute left-0 transform -translate-x-1/2 w-3 h-3 bg-red-500 rounded-full"></div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="relative z-10 flex items-center gap-4 bg-white shadow-lg rounded-lg px-4 py-3 w-full lg:w-3/4 hover:scale-105 transition-transform lg:self-end">
+        <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center shadow-md">
+          <i class="fas fa-star text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-teal-700">Premium Quality</h3>
+          <p class="text-sm text-gray-600">Delivering excellence in every aspect of our services.</p>
+        </div>
+        <div class="absolute right-0 transform translate-x-1/2 w-3 h-3 bg-teal-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-gray-100 to-white py-12" id="certification">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-wide">Certification</h1>
+      <p class="text-gray-600 mt-4 text-sm md:text-base">
+        Earn a professional certificate to validate your expertise and enhance your career prospects.
+      </p>
+    </header>
+
+    <!-- Certification Content -->
+    <div class="relative bg-white shadow-2xl rounded-xl flex flex-col lg:flex-row items-center p-6 lg:p-12 gap-8">
+      <!-- Decorative Elements -->
+      <div class="absolute top-0 left-0 w-24 h-24 bg-orange-400 opacity-30 rounded-full -z-10"></div>
+      <div class="absolute bottom-0 right-0 w-32 h-32 bg-blue-400 opacity-20 rounded-full -z-10"></div>
+
+      <!-- Certificate Preview -->
+      <div class="lg:w-1/2">
+        <div class="relative w-full max-w-lg mx-auto hover:scale-105 transform transition-all duration-300">
+          <img src="./images/certificate.webp" alt="Certificate" class="rounded-lg shadow-lg w-full">
+          <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-2 bg-gradient-to-r from-orange-400 to-blue-400 rounded-lg"></div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Showcase Your Expertise</h2>
+        <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+          Display your achievements with an industry-recognized certificate that highlights your skills in web development, making you stand out in the job market.
+        </p>
+        <div class="mt-6">
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <span class="text-gray-700 text-sm md:text-base">Validates expertise in modern web technologies.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <span class="text-gray-700 text-sm md:text-base">Highly valued by leading companies.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center">
+                <i class="fas fa-check text-sm"></i>
+              </div>
+              <span class="text-gray-700 text-sm md:text-base">Enhances your resume and LinkedIn profile.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="bg-gradient-to-r from-blue-50 to-purple-100 py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-gray-800">Why Learn the MERN Stack?</h1>
+      <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+        The MERN stack is an ideal choice for full-stack web development, combining MongoDB, Express, React, and Node.js for creating modern, scalable applications. Let’s explore the key reasons to dive into MERN development.
+      </p>
+    </header>
+
+    <!-- Features Section -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Feature 1: MongoDB -->
+      <div class="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-center">
+          <div class="text-green-500 text-4xl mb-4">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-green-500 transition-colors duration-300">
+            MongoDB - NoSQL Database
+          </h3>
+          <p class="text-gray-600 mt-2">
+            MongoDB offers a flexible, scalable database solution that fits perfectly with the MERN stack’s need for high performance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2: Express -->
+      <div class="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-center">
+          <div class="text-blue-500 text-4xl mb-4">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">
+            Express - Backend Framework
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Express.js simplifies the server-side logic, helping you build robust RESTful APIs with minimal effort.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 3: React -->
+      <div class="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-center">
+          <div class="text-purple-500 text-4xl mb-4">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-purple-500 transition-colors duration-300">
+            React - Dynamic Frontend
+          </h3>
+          <p class="text-gray-600 mt-2">
+            React offers a highly efficient approach to building user interfaces with components and hooks for better performance and reusability.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 4: Node.js -->
+      <div class="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div class="text-center">
+          <div class="text-yellow-500 text-4xl mb-4">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="text-2xl font-semibold text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+            Node.js - Scalable Backend
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Node.js enables fast, scalable server-side applications that work seamlessly with MongoDB, Express, and React in the MERN stack.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="flex gap-10 justify-between bg-[#172337] p-5 text-white" >
+    <div>
+      <h1 style="color: #359D21;"class="text-2xl font-bold">Vetri IT System</h1>
+      <a class="mt-5">+91-8438558527</a><br>
+      <a>abc@gmail.com</a>
+    </div>
+    <div>
+      <h1 style="color: #359D21;" class="text-2xl font-bold">services</h1>
+      <a class="mt-5">web development</a><br>
+      <a>frontend developer</a><br>
+      <a>Backend Developer(python)</a><br>
+      <a>Backend Developer(Node.js)</a><br>
+      <a>Backend Developer(Java)</a><br>
+      <a>MERN Stack Developer</a>
+    </div>
+    <div>
+      <h1 style="color: #359D21;" class="text-2xl font-bold">Support</h1>
+      <a class="mt-10">Contact</a><br>
+      <a>Privacy Policy</a><br>
+      <a>Terms & Conditions</a>
+    </div>
+    <div>
+      <h1  style="color: #359D21;" class="text-2xl font-bold">Get in Touch</h1>
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <i class="fa-brands fa-instagram text-2xl ml-5"></i>
+        <i class="fa-brands fa-facebook text-2xl ml-5"></i>
+    </div>
+  </div>
+</footer>     
+
+
+          
+          
+          
+
+
+
+
+          <script src="script.js"></script>
+
+          </body>
+          </html>
